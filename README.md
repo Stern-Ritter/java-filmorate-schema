@@ -7,8 +7,10 @@
 
 ## Query examples
 
+## Film
+
 ```java
-#### public Film create(Film film)
+public Film create(Film film)
 ```
 
 ```sql
@@ -23,7 +25,7 @@ VALUES (
 ```
 
 ```java
-#### public Film update(Film film)
+public Film update(Film film)
 ```
 
 ```sql
@@ -36,7 +38,7 @@ WHERE film_id = 1;
 ```
 
 ```java
-#### public Film get(long id)
+public Film get(long id)
 ```
 
 ```sql
@@ -46,7 +48,7 @@ WEHERE film_id = 1;
 ```
 
 ```java
-#### public List<Film> get()
+public List<Film> get()
 ```
 
 ```sql
@@ -55,7 +57,7 @@ FROM films;
 ```
 
 ```java
-#### public Film addLike(long filmId, long userId)
+public Film addLike(long filmId, long userId)
 ```
 
 ```sql
@@ -64,7 +66,7 @@ VALUES (1, 1);
 ```
 
 ```java
-#### public Film deleteLike(long filmId, long userId)
+public Film deleteLike(long filmId, long userId)
 ```
 
 ```sql
@@ -73,7 +75,7 @@ WHERE filmId = 1 AND userId = 1;
 ```
 
 ```java
-#### public List<Film> getPopular(int count)
+public List<Film> getPopular(int count)
 ```
 
 ```sql
@@ -87,8 +89,10 @@ LIMIT 10
 );
 ```
 
+## User
+
 ```java
-#### public User create(User user)
+public User create(User user)
 ```
 
 ```sql
@@ -102,7 +106,7 @@ VALUES (
 ```
 
 ```java
-#### public User update(User user)
+public User update(User user)
 ```
 
 ```sql
@@ -115,7 +119,7 @@ WHERE user_id = 1;
 ```
 
 ```java
-#### public User get(long id)
+public User get(long id)
 ```
 
 ```sql
@@ -125,7 +129,7 @@ WEHERE user_id = 1;
 ```
 
 ```java
-#### public List<User> get()
+public List<User> get()
 ```
 
 ```sql
@@ -134,7 +138,7 @@ FROM users;
 ```
 
 ```java
-#### public User addFriend(long userId, long otherUserId)
+public User addFriend(long userId, long otherUserId)
 ```
 
 ```sql
@@ -143,7 +147,7 @@ VALUES (1, 2, true);
 ```
 
 ```java
-#### public User deleteFriend(long userId, long otherUserId)
+public User deleteFriend(long userId, long otherUserId)
 ```
 
 ```sql
@@ -152,7 +156,7 @@ WHERE userId = 1 AND otherUserId = 2;
 ```
 
 ```java
-#### public List<User> getCommonFriends(long userId, long otherUserId)
+public List<User> getCommonFriends(long userId, long otherUserId)
 ```
 
 ```sql
@@ -167,7 +171,7 @@ AND ff.user_id = 2;2
 ```
 
 ```java
-#### public List<User> getFriends(long userId)
+public List<User> getFriends(long userId)
 ```
 
 ```sql
