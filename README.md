@@ -7,7 +7,9 @@
 
 ## Query examples
 
+```java
 #### public Film create(Film film)
+```
 
 ```sql
 INSERT INTO films (name, description, release_date, duration, age_rating_id)
@@ -20,7 +22,9 @@ VALUES (
 );
 ```
 
+```java
 #### public Film update(Film film)
+```
 
 ```sql
 UPDATE films SET (name, description, release_date, duration, age_rating_id) = (
@@ -31,7 +35,9 @@ UPDATE films SET (name, description, release_date, duration, age_rating_id) = (
 WHERE film_id = 1;
 ```
 
+```java
 #### public Film get(long id)
+```
 
 ```sql
 SELECT film_id, name, description, release_date, duration, age_rating_id
@@ -39,28 +45,36 @@ FROM films
 WEHERE film_id = 1;
 ```
 
+```java
 #### public List<Film> get()
+```
 
 ```sql
 SELECT film_id, name, description, release_date, duration, age_rating_id
 FROM films;
 ```
 
+```java
 #### public Film addLike(long filmId, long userId)
+```
 
 ```sql
 INSERT INTO films_likes (film_id, user_id)
 VALUES (1, 1);
 ```
 
+```java
 #### public Film deleteLike(long filmId, long userId)
+```
 
 ```sql
 DELETE FROM films_likes
 WHERE filmId = 1 AND userId = 1;
 ```
 
+```java
 #### public List<Film> getPopular(int count)
+```
 
 ```sql
 SELECT film_id, name, description, release_date, duration, age_rating_id
@@ -73,7 +87,9 @@ LIMIT 10
 );
 ```
 
+```java
 #### public User create(User user)
+```
 
 ```sql
 INSERT INTO users (email, login, name, birthday)
@@ -85,7 +101,9 @@ VALUES (
 );
 ```
 
+```java
 #### public User update(User user)
+```
 
 ```sql
 UPDATE users SET (email, login, name, birthday) = (
@@ -96,7 +114,9 @@ UPDATE users SET (email, login, name, birthday) = (
 WHERE user_id = 1;
 ```
 
+```java
 #### public User get(long id)
+```
 
 ```sql
 SELECT user_id, email, login, name, birthday
@@ -104,28 +124,36 @@ FROM users
 WEHERE user_id = 1;
 ```
 
+```java
 #### public List<User> get()
+```
 
 ```sql
 SELECT user_id, email, login, name, birthday
 FROM users;
 ```
 
+```java
 #### public User addFriend(long userId, long otherUserId)
+```
 
 ```sql
 INSERT INTO users_friends (user_id, friend_id, boolean)
 VALUES (1, 2, true);
 ```
 
+```java
 #### public User deleteFriend(long userId, long otherUserId)
+```
 
 ```sql
 DELETE FROM users_friends
 WHERE userId = 1 AND otherUserId = 2;
 ```
 
+```java
 #### public List<User> getCommonFriends(long userId, long otherUserId)
+```
 
 ```sql
 SELECT user_id, email, login, name, birthday
@@ -138,7 +166,9 @@ ON u.user_id = ff.friend_id
 AND ff.user_id = 2;2
 ```
 
+```java
 #### public List<User> getFriends(long userId)
+```
 
 ```sql
 SELECT user_id, email, login, name, birthday
